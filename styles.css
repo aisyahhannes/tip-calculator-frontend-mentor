@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --green400: hsl(172, 67%, 45%);
+    --green900: hsl(183, 100%, 15%);
+    --grey500: hsl(186, 14%, 43%);
+    --grey400: hsl(184, 14%, 56%);
+    --grey200: hsl(185, 41%, 84%);
+    --grey50: hsl(189, 47%, 97%);
+    --white: hsl(0, 100%, 100%);
+}
+
+* {
+    font-family: 'Space Mono';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--grey200);
+}
+
+h1 {
+    font-size: 12pt;
+    letter-spacing: 3px;
+    color: var(--green900);
+    margin: 0;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--green400);
+}
+
+p {
+    margin: 0;
+}
+
+label {
+    margin: 0;
+    font-size: 10px;
+    color: var(--green900);
+}
+
+main {
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+section {
+    width: 48%;
+    height: 100%;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+}
+
+input {
+    width: 100%;
+    background-color: var(--grey50);
+    border: none;
+}
+
+.row div {
+    width: 60px;
+    height: 35px;
+    padding: 0;
+}
+
+button.tip {
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--green900);
+    border-radius: 10px;
+    border: 5px solid white;
+    /* padding: 4px; */
+}
+
+button.tip.custom {
+    color: var(--green900);
+    background-color: var(--grey50);
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    color: var(--white);
+    background-color: var(--green900);
+    border-radius: 10px;
+}
+
+.amounts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tip-total {
+    font-size: 11px;
+}
+
+.per {
+    font-size: 10px;
+}
+
+button.reset {
+    width: 100%;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--green900);
+    background-color: var(--grey50);
+    opacity: 0.3;
+    border: none;
+    border-radius: 3px;
+}
+
+button.reset:hover {
+    background-color: var(--green400);
+    opacity: 1;
+}
