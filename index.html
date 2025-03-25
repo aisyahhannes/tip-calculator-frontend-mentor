@@ -10,32 +10,39 @@
 </head>
 <body>
   <header>
-    <h1>SPLI</h1>
-    <h1>TTER</h1>
+    <img src="images/logo.svg" alt="Splitter logo">
   </header>
   <main>
     <section class="form">
       <form>
         <div>
-          <label for="bill">Bill</label>
-          <input type="text">
+          <div class="label-error">
+            <label for="bill">Bill</label>
+            <p id="error-bill" class="error"></p>
+          </div>
+          <input type="text" id="bill" class="bill">
         </div>
         <div>
           <label for="tip">Select Tip %</label>
           <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-4 col-lg-4"><button class="tip">5%</button></div>
-              <div class="col-sm-6 col-md-4 col-lg-4"><button class="tip">10%</button></div>
-              <div class="col-sm-6 col-md-4 col-lg-4"><button class="tip">15%</button></div>
-              <div class="col-sm-6 col-md-4 col-lg-4"><button class="tip">25%</button></div>
-              <div class="col-sm-6 col-md-4 col-lg-4"><button class="tip">50%</button></div>
-              <div class="col-sm-6 col-md-4 col-lg-4"><button class="tip custom">Custom</button></div>
+            <div id="tips" class="row">
+              <div class="col-sm-6 col-md-4 col-lg-4"><button id="tip" class="tip" value="5">5%</button></div>
+              <div class="col-sm-6 col-md-4 col-lg-4"><button id="tip" class="tip" value="10">10%</button></div>
+              <div class="col-sm-6 col-md-4 col-lg-4"><button id="tip" class="tip" value="15">15%</button></div>
+              <div class="col-sm-6 col-md-4 col-lg-4"><button id="tip" class="tip" value="25">25%</button></div>
+              <div class="col-sm-6 col-md-4 col-lg-4"><button id="tip" class="tip" value="50">50%</button></div>
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <input type="text" id="custom" class="tip custom" placeholder="Custom">
+              </div>
             </div>
           </div>
         </div>
         <div>
-          <label for="people">Number of People</label>
-          <input type="text">
+          <div class="label-error">
+            <label for="people">Number of People</label>
+            <p id="error-people" class="error"></p>
+          </div>
+          <input type="text" id="people" class="people">
         </div>
       </form>
     </section>
@@ -46,9 +53,9 @@
             <p class="tip-total">Tip Amount</p>
             <p class="per">/ person</p>
           </div>
-          <div>
-            <h2>$</h2>
-            <h2 id="amount"></h2>
+          <div class="value">
+            <h1>$</h1>
+            <h1 id="amount"></h1>
           </div>
         </div>
         <div class="amounts">
@@ -56,14 +63,14 @@
             <p class="tip-total">Total</p>
             <p class="per">/ person</p>
           </div>
-          <div>
-            <h2>$</h2>
-            <h2 id="amount"></h2>
+          <div class="value">
+            <h1>$</h1>
+            <h1 id="person"></h1>
           </div>
         </div>
       </div>
       <div>
-        <button class="reset">Reset</button>
+        <button id="reset" class="reset">Reset</button>
       </div>
     </section>
   </main>
