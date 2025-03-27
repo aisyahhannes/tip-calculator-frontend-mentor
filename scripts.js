@@ -41,6 +41,7 @@ form.addEventListener("submit", (event) => {
 bill.addEventListener("input", () => {
     let isValid = true;
     if (!/^\d*\.?\d*$/.test(bill.value)) {
+        bill.classList.add("error-input");
         errorbill.textContent = "Numbers only";
         isValid = false;
     }
@@ -64,8 +65,10 @@ custom.addEventListener("input", () => {
     tipButtons.forEach(btn => btn.classList.remove("selected"));
     // Custom amount validation
     if (!/^\d+$/.test(custom.value)) {
+        custom.classList.add("error-input");
         isValid = false;
     } else if (value < 1) {
+        custom.classList.add("error-input");
         isValid = false;
     }
     tipAmount = parseFloat(custom.value) || 0;
@@ -78,9 +81,11 @@ people.addEventListener("input", () => {
     let isValid = true;
 
     if (!/^\d+$/.test(people.value)) {
+        people.classList.add("error-input");
         errorperson.textContent = "Numbers only";
         isValid = false;
     } else if (value < 1) {
+        people.classList.add("error-input");
         errorperson.textContent = "Can't be zero";
         isValid = false;
     }
