@@ -62,6 +62,12 @@ tipButtons.forEach(button => {
 });
 custom.addEventListener("input", () => {
     tipButtons.forEach(btn => btn.classList.remove("selected"));
+    // Custom amount validation
+    if (!/^\d+$/.test(custom.value)) {
+        isValid = false;
+    } else if (value < 1) {
+        isValid = false;
+    }
     tipAmount = parseFloat(custom.value) || 0;
     updateCalculation();
 });
